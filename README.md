@@ -1,1 +1,1 @@
-# SpeakerEmbeddingGenerationDenoisingDiffusion
+# Speaker Embedding Generation Denoising Diffusion
