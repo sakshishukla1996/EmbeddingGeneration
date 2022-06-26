@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 from TSNE_Plot import TSNE_plot
 from dataNormalize import dataNormalize
-# from sklearn.datasets import make_checkerboard,make_circles,make_moons,make_s_curve,make_swiss_roll
 
 from utils import * 
 
@@ -12,36 +11,19 @@ DATA_PATH = '../dataset/embedding_vectors_as_list.pt'
 list_of_embeddings =torch.load(DATA_PATH, map_location='cpu')
 
 #Taking first 100 items from speaker embedding list and running the experiment
-ten_emb = list_of_embeddings[:100]
+ten_emb = list_of_embeddings[:500]
 b = torch.stack(ten_emb)
 c = b.detach().numpy()
 c = dataNormalize(c)
-#Function to plot data in 2D
-# def tsneplot(twoDarray):
-#     #transform to 2D array
-#     X_embedded = TSNE(n_components=2, learning_rate='auto',init='random',random_state=0, perplexity=20).fit_transform(twoDarray)  
-#     fig, ax = plt.subplots(figsize=(10,8))
-#     #Plotting 2D array
-#     ax.scatter(X_embedded[:,0], X_embedded[:,1], alpha=.5, color='blue')
-#     plt.title('Scatter plot using t-SNE')
-#     plt.show()
 
-TSNE_plot(c)    
-
-# dataset = list_of_embeddings[0]
-# dataset = torch.vstack((dataset, dataset))
-# dataset = dataset.T
-# dataset.shape
+TSNE_plot(c, color='red')    
 
 print("The shape of input is: ", c.shape)
-
-# dataset = np.hstack((dataset, np.zeros((20000, 1))))
-# dataset.shape
 
 torch.set_default_dtype(torch.float64)
 dataset = torch.tensor(c)
 
-num_steps = 100
+num_steps = 200
 betas = torch.tensor([1.7e-5] * num_steps)
 betas = make_beta_schedule(schedule='sigmoid', n_timesteps=num_steps, start=1e-5, end=0.5e-2)
 
@@ -82,7 +64,7 @@ optimizer = optim.Adam(model.parameters(), lr=1e-4)
 ema = EMA(0.9)
 ema.register(model)
 # Batch size
-batch_size = 16
+batch_size = 64
 for t in range(1000):
     # X is a torch Variable
     permutation = torch.randperm(dataset.size()[0])
@@ -117,8 +99,7 @@ for t in range(1000):
 print(len(x_seq))
 d = cur_x.detach().numpy()
 d = dataNormalize(d)
-TSNE_plot(d)
-
+TSNE_plot(d, color='blue')
 
 #Now Plotting both on same graph with different colors
 
