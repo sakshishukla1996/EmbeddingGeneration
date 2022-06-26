@@ -8,7 +8,7 @@ from dataNormalize import dataNormalize
 from utils import * 
 
 DATA_PATH = '../dataset/embedding_vectors_as_list.pt'
-list_of_embeddings =torch.load(DATA_PATH, map_location='cpu')
+list_of_embeddings =torch.load(DATA_PATH, map_location='gpu')
 
 #Taking first 100 items from speaker embedding list and running the experiment
 ten_emb = list_of_embeddings[:500]
@@ -16,14 +16,14 @@ b = torch.stack(ten_emb)
 c = b.detach().numpy()
 c = dataNormalize(c)
 
-TSNE_plot(c, color='red')    
+TSNE_plot(c, color='red', name='BeforeDDM.png')    
 
 print("The shape of input is: ", c.shape)
 
 torch.set_default_dtype(torch.float64)
 dataset = torch.tensor(c)
 
-num_steps = 200
+num_steps = 500
 betas = torch.tensor([1.7e-5] * num_steps)
 betas = make_beta_schedule(schedule='sigmoid', n_timesteps=num_steps, start=1e-5, end=0.5e-2)
 
@@ -91,21 +91,24 @@ for t in range(1000):
         fig, axs = plt.subplots(1, 10, figsize=(28, 3))
         for i in range(1, 11):
             cur_x = x_seq[i * 10].detach()
-        #     axs[i-1].scatter(cur_x[:, 0], cur_x[:, 1],color='white',edgecolor='gray', s=5);
-        #     axs[i-1].set_axis_off(); 
-        #     axs[i-1].set_title('$q(\mathbf{x}_{'+str(i*100)+'})$')
+            axs[i-1].scatter(cur_x[:, 0], cur_x[:, 1],color='white',edgecolor='gray', s=5);
+            axs[i-1].set_axis_off(); 
+            axs[i-1].set_title('$q(\mathbf{x}_{'+str(i*100)+'})$')
 
 
 print(len(x_seq))
 d = cur_x.detach().numpy()
 d = dataNormalize(d)
-TSNE_plot(d, color='blue')
+TSNE_plot(d, color='blue', name='AfterDDM.png')
 
 #Now Plotting both on same graph with different colors
-
+#Plotting 2D array
+c = TSNE(n_components=2, learning_rate='auto',init='random',random_state=0, perplexity=20).fit_transform(c)  
+d = TSNE(n_components=2, learning_rate='auto',init='random',random_state=0, perplexity=20).fit_transform(d)  
 fig, ax = plt.subplots(figsize=(10,8))
 #Plotting 2D array
-ax.scatter(c[:,0], c[:,1], alpha=.5, color='blue')
-ax.scatter(d[:,0], d[:,1], alpha=.5, color='red')
+ax.scatter(c[:,0], c[:,1], alpha=.5, color='red')
+ax.scatter(d[:,0], d[:,1], alpha=.5, color='blue')
 plt.title('Scatter plot using t-SNE')
-plt.show()
+# plt.show()
+plt.savefig('AfterDDMBoth.png')
