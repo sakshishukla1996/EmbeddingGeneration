@@ -6,8 +6,9 @@ from TSNE_Plot import TSNE_plot
 from dataNormalize import dataNormalize
 
 from utils import * 
-# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-device = torch.device("cuda:2,3,4" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print("Acquired GPU successfully")
+# device = torch.device("cuda:2,3,4" if torch.cuda.is_available() else "cpu")
 DATA_PATH = '../dataset/embedding_vectors_as_list.pt'
 list_of_embeddings =torch.load(DATA_PATH, map_location='cpu')
 
