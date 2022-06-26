@@ -11,7 +11,7 @@ DATA_PATH = '../dataset/embedding_vectors_as_list.pt'
 list_of_embeddings =torch.load(DATA_PATH, map_location='cpu')
 
 #Taking first 100 items from speaker embedding list and running the experiment
-ten_emb = list_of_embeddings[:500]
+ten_emb = list_of_embeddings[:2000]
 b = torch.stack(ten_emb)
 c = b.detach().numpy()
 c = dataNormalize(c)
@@ -23,7 +23,7 @@ print("The shape of input is: ", c.shape)
 torch.set_default_dtype(torch.float64)
 dataset = torch.tensor(c)
 
-num_steps = 500
+num_steps = 2000
 betas = torch.tensor([1.7e-5] * num_steps)
 betas = make_beta_schedule(schedule='sigmoid', n_timesteps=num_steps, start=1e-5, end=0.5e-2)
 
