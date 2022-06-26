@@ -6,12 +6,13 @@ from TSNE_Plot import TSNE_plot
 from dataNormalize import dataNormalize
 
 from utils import * 
-
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:2,3,4" if torch.cuda.is_available() else "cpu")
 DATA_PATH = '../dataset/embedding_vectors_as_list.pt'
 list_of_embeddings =torch.load(DATA_PATH, map_location='cpu')
 
 #Taking first 100 items from speaker embedding list and running the experiment
-ten_emb = list_of_embeddings[:2000]
+ten_emb = list_of_embeddings[:1000]
 b = torch.stack(ten_emb)
 c = b.detach().numpy()
 c = dataNormalize(c)
@@ -23,7 +24,7 @@ print("The shape of input is: ", c.shape)
 torch.set_default_dtype(torch.float64)
 dataset = torch.tensor(c)
 
-num_steps = 2000
+num_steps = 1500
 betas = torch.tensor([1.7e-5] * num_steps)
 betas = make_beta_schedule(schedule='sigmoid', n_timesteps=num_steps, start=1e-5, end=0.5e-2)
 
@@ -74,6 +75,7 @@ for t in range(1000):
         batch_x = dataset[indices]
         # Compute the loss.
         loss = noise_estimation_loss(model, batch_x,alphas_bar_sqrt,one_minus_alphas_bar_sqrt,num_steps)
+
         # Before the backward pass, zero all of the network gradients
         optimizer.zero_grad()
         # Backward pass: compute gradient of the loss with respect to parameters
