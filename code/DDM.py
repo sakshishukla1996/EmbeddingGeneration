@@ -8,7 +8,7 @@ from dataNormalize import dataNormalize
 from utils import * 
 
 DATA_PATH = '../dataset/embedding_vectors_as_list.pt'
-list_of_embeddings =torch.load(DATA_PATH, map_location='gpu')
+list_of_embeddings =torch.load(DATA_PATH, map_location='cpu')
 
 #Taking first 100 items from speaker embedding list and running the experiment
 ten_emb = list_of_embeddings[:500]
