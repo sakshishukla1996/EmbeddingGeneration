@@ -1,0 +1,12 @@
+The shape of input is:  (100, 64)
+tensor(1.1333, grad_fn=<MeanBackward0>)
+tensor(0.9960, grad_fn=<MeanBackward0>)
+tensor(1.0229, grad_fn=<MeanBackward0>)
+tensor(0.9988, grad_fn=<MeanBackward0>)
+tensor(1.0292, grad_fn=<MeanBackward0>)
+tensor(1.0333, grad_fn=<MeanBackward0>)
+tensor(1.0026, grad_fn=<MeanBackward0>)
+tensor(0.9817, grad_fn=<MeanBackward0>)
+tensor(1.0057, grad_fn=<MeanBackward0>)
+tensor(1.0267, grad_fn=<MeanBackward0>)
+101

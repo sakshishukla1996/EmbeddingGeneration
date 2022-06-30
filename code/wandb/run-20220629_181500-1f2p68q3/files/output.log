@@ -1,0 +1,16 @@
+The shape of input is:  (100, 64)
+tensor(1.1963, grad_fn=<MeanBackward0>)
+tensor(0.9957, grad_fn=<MeanBackward0>)
+tensor(1.0008, grad_fn=<MeanBackward0>)
+tensor(0.9910, grad_fn=<MeanBackward0>)
+tensor(0.9786, grad_fn=<MeanBackward0>)
+tensor(0.9885, grad_fn=<MeanBackward0>)
+tensor(1.0096, grad_fn=<MeanBackward0>)
+tensor(1.0387, grad_fn=<MeanBackward0>)
+tensor(1.0371, grad_fn=<MeanBackward0>)
+tensor(0.9881, grad_fn=<MeanBackward0>)
+101
+Traceback (most recent call last):
+  File "C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\DDM.py", line 125, in <module>
+    wandb.log({c})
+TypeError: unhashable type: 'numpy.ndarray'

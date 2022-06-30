@@ -1,0 +1,23 @@
+The shape of input is:  (100, 64)
+tensor(1.1582, grad_fn=<MeanBackward0>)
+tensor(0.9836, grad_fn=<MeanBackward0>)
+tensor(0.9956, grad_fn=<MeanBackward0>)
+tensor(1.0387, grad_fn=<MeanBackward0>)
+tensor(0.9751, grad_fn=<MeanBackward0>)
+tensor(0.9908, grad_fn=<MeanBackward0>)
+tensor(1.0543, grad_fn=<MeanBackward0>)
+tensor(1.0169, grad_fn=<MeanBackward0>)
+tensor(1.0204, grad_fn=<MeanBackward0>)
+tensor(0.9905, grad_fn=<MeanBackward0>)
+101
+wandb: ERROR Expected `data_table` to be `wandb.Table` type, instead got  ndarray
+Traceback (most recent call last):
+  File "C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\DDM.py", line 136, in <module>
+    wandb.log({"Real Distribution" : wandb.plot.scatter(c, "dim 1", "dim 2")})
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\plot\scatter.py", line 24, in scatter
+    return wandb.plot_table(
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 1737, in plot_table
+    return custom_chart(vega_spec_name, data_table, fields, string_fields or {})
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\viz.py", line 101, in custom_chart
+    raise Error(
+wandb.errors.Error: Expected `data_table` to be `wandb.Table` type, instead got  ndarray

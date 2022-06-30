@@ -1,0 +1,39 @@
+The shape of input is:  (100, 64)
+tensor(1.2260, grad_fn=<MeanBackward0>)
+tensor(0.9819, grad_fn=<MeanBackward0>)
+tensor(1.0652, grad_fn=<MeanBackward0>)
+tensor(1.0199, grad_fn=<MeanBackward0>)
+tensor(1.0264, grad_fn=<MeanBackward0>)
+tensor(1.0075, grad_fn=<MeanBackward0>)
+tensor(0.9571, grad_fn=<MeanBackward0>)
+tensor(0.9410, grad_fn=<MeanBackward0>)
+tensor(0.9603, grad_fn=<MeanBackward0>)
+tensor(0.9804, grad_fn=<MeanBackward0>)
+101
+wandb: ERROR plotly is required to log interactive plots, install with: `pip install plotly` or convert the plot to an image with `wandb.Image(plt)`
+Traceback (most recent call last):
+  File "C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\DDM.py", line 133, in <module>
+    wandb.log({"chart": plt})
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 256, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 222, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 1548, in log
+    self._log(data=data, step=step, commit=commit)
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 1339, in _log
+    self._partial_history_callback(data, step, commit)
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\wandb_run.py", line 1228, in _partial_history_callback
+    self._backend.interface.publish_partial_history(
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\interface\interface.py", line 541, in publish_partial_history
+    data = history_dict_to_json(run, data, step=user_step, ignore_copy_err=True)
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\data_types\utils.py", line 54, in history_dict_to_json
+    payload[key] = val_to_json(
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\data_types\utils.py", line 82, in val_to_json
+    val = Plotly.make_plot_media(val)
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\sdk\data_types\plotly.py", line 48, in make_plot_media
+    val = util.matplotlib_to_plotly(val)
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\util.py", line 558, in matplotlib_to_plotly
+    tools = get_module(
+  File "C:\Users\aksha\AppData\Local\Programs\Python\Python39\lib\site-packages\wandb\util.py", line 307, in get_module
+    raise wandb.Error(required)
+wandb.errors.Error: plotly is required to log interactive plots, install with: `pip install plotly` or convert the plot to an image with `wandb.Image(plt)`

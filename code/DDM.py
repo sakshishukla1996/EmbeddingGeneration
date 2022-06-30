@@ -1,3 +1,7 @@
+import wandb
+
+wandb.init(project="DDM-Project")
+WANDB_API_KEY = 'ffe5b918b921d391434d044c9bc030bdef3d48de'
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
@@ -5,15 +9,19 @@ from sklearn.manifold import TSNE
 from TSNE_Plot import TSNE_plot
 from dataNormalize import dataNormalize
 
+from model import ConditionalModel
+from ema import EMA
+import torch.optim as optim
+
 from utils import * 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print("Acquired GPU successfully")
+# print("Acquired GPU successfully")
 # device = torch.device("cuda:2,3,4" if torch.cuda.is_available() else "cpu")
 DATA_PATH = '../dataset/embedding_vectors_as_list.pt'
 list_of_embeddings =torch.load(DATA_PATH, map_location='cpu')
 
 #Taking first 100 items from speaker embedding list and running the experiment
-ten_emb = list_of_embeddings[:1000]
+ten_emb = list_of_embeddings[:100]
 b = torch.stack(ten_emb)
 c = b.detach().numpy()
 c = dataNormalize(c)
@@ -25,7 +33,8 @@ print("The shape of input is: ", c.shape)
 torch.set_default_dtype(torch.float64)
 dataset = torch.tensor(c)
 
-num_steps = 1500
+num_steps = 100
+batch_size = 64
 betas = torch.tensor([1.7e-5] * num_steps)
 betas = make_beta_schedule(schedule='sigmoid', n_timesteps=num_steps, start=1e-5, end=0.5e-2)
 
@@ -55,9 +64,7 @@ def q_posterior_mean_variance(x_0, x_t, t):
     var = extract(posterior_log_variance_clipped, t, x_0)
     return mean, var
 
-from model import ConditionalModel
-from ema import EMA
-import torch.optim as optim
+
 
 model = ConditionalModel(num_steps)
 optimizer = optim.Adam(model.parameters(), lr=1e-4)
@@ -65,8 +72,13 @@ optimizer = optim.Adam(model.parameters(), lr=1e-4)
 # Create EMA model
 ema = EMA(0.9)
 ema.register(model)
+
 # Batch size
-batch_size = 64
+wandb.config = {
+  "epochs": num_steps,
+  "batch_size": batch_size
+}
+
 for t in range(1000):
     # X is a torch Variable
     permutation = torch.randperm(dataset.size()[0])
@@ -76,7 +88,9 @@ for t in range(1000):
         batch_x = dataset[indices]
         # Compute the loss.
         loss = noise_estimation_loss(model, batch_x,alphas_bar_sqrt,one_minus_alphas_bar_sqrt,num_steps)
-
+        wandb.log({"loss": loss})
+        # Optional
+        wandb.watch(model)
         # Before the backward pass, zero all of the network gradients
         optimizer.zero_grad()
         # Backward pass: compute gradient of the loss with respect to parameters
@@ -108,10 +122,15 @@ TSNE_plot(d, color='blue', name='AfterDDM.png')
 #Plotting 2D array
 c = TSNE(n_components=2, learning_rate='auto',init='random',random_state=0, perplexity=20).fit_transform(c)  
 d = TSNE(n_components=2, learning_rate='auto',init='random',random_state=0, perplexity=20).fit_transform(d)  
+wandb.log({'Original Data: ':c})
+wandb.log({'Generated Data: ':d})
 fig, ax = plt.subplots(figsize=(10,8))
 #Plotting 2D array
 ax.scatter(c[:,0], c[:,1], alpha=.5, color='red')
 ax.scatter(d[:,0], d[:,1], alpha=.5, color='blue')
 plt.title('Scatter plot using t-SNE')
 # plt.show()
+wandb.log({"chart": plt})
+
+
 plt.savefig('AfterDDMBoth.png')
