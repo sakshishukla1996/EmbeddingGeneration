@@ -1,0 +1,22 @@
+{
+    "os": "Windows-10-10.0.19044-SP0",
+    "python": "3.9.12",
+    "heartbeatAt": "2022-07-18T19:48:21.462670",
+    "startedAt": "2022-07-18T19:48:18.299462",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\aksha\\Documents\\GitHub\\SpeakerEmbeddingGenerationDenoisingDiffusion\\code\\DDM.py",
+    "codePath": "code\\DDM.py",
+    "git": {
+        "remote": "https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion.git",
+        "commit": "fe4b7136e6b61311b85e1266698e7c6a320dc248"
+    },
+    "email": "akshat41121995@gmail.com",
+    "root": "C:/Users/aksha/Documents/GitHub/SpeakerEmbeddingGenerationDenoisingDiffusion",
+    "host": "DESKTOP-3G7OC0J",
+    "username": "aksha",
+    "executable": "C:\\Users\\aksha\\anaconda3\\python.exe"
+}

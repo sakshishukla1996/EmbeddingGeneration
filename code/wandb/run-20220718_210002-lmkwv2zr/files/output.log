@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\DDM.py", line 48, in <module>
+    wandb.log({"chart": plt})
+  File "C:\Users\aksha\anaconda3\lib\site-packages\wandb\sdk\wandb_run.py", line 256, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\aksha\anaconda3\lib\site-packages\wandb\sdk\wandb_run.py", line 222, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\aksha\anaconda3\lib\site-packages\wandb\sdk\wandb_run.py", line 1543, in log
+    self._log(data=data, step=step, commit=commit)
+  File "C:\Users\aksha\anaconda3\lib\site-packages\wandb\sdk\wandb_run.py", line 1334, in _log
+    self._partial_history_callback(data, step, commit)
+  File "C:\Users\aksha\anaconda3\lib\site-packages\wandb\sdk\wandb_run.py", line 1223, in _partial_history_callback
+    self._backend.interface.publish_partial_history(
+  File "C:\Users\aksha\anaconda3\lib\site-packages\wandb\sdk\interface\interface.py", line 541, in publish_partial_history
+    data = history_dict_to_json(run, data, step=user_step, ignore_copy_err=True)
+  File "C:\Users\aksha\anaconda3\lib\site-packages\wandb\sdk\data_types\utils.py", line 54, in history_dict_to_json
+    payload[key] = val_to_json(
+  File "C:\Users\aksha\anaconda3\lib\site-packages\wandb\sdk\data_types\utils.py", line 82, in val_to_json
+    val = Plotly.make_plot_media(val)
+  File "C:\Users\aksha\anaconda3\lib\site-packages\wandb\sdk\data_types\plotly.py", line 48, in make_plot_media
+    val = util.matplotlib_to_plotly(val)
+  File "C:\Users\aksha\anaconda3\lib\site-packages\wandb\util.py", line 565, in matplotlib_to_plotly
+    return tools.mpl_to_plotly(obj)
+  File "C:\Users\aksha\anaconda3\lib\site-packages\plotly\tools.py", line 112, in mpl_to_plotly
+    matplotlylib.Exporter(renderer).run(fig)
+  File "C:\Users\aksha\anaconda3\lib\site-packages\plotly\matplotlylib\mplexporter\exporter.py", line 53, in run
+    self.crawl_fig(fig)
+  File "C:\Users\aksha\anaconda3\lib\site-packages\plotly\matplotlylib\mplexporter\exporter.py", line 124, in crawl_fig
+    self.crawl_ax(ax)
+  File "C:\Users\aksha\anaconda3\lib\site-packages\plotly\matplotlylib\mplexporter\exporter.py", line 146, in crawl_ax
+    self.draw_collection(ax, collection)
+  File "C:\Users\aksha\anaconda3\lib\site-packages\plotly\matplotlylib\mplexporter\exporter.py", line 289, in draw_collection
+    offset_order = offset_dict[collection.get_offset_position()]
+AttributeError: 'PathCollection' object has no attribute 'get_offset_position'

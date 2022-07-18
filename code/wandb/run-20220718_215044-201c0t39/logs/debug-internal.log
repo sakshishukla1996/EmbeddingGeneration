@@ -1,0 +1,220 @@
+2022-07-18 21:50:47,359 INFO    MainThread:16776 [internal.py:wandb_internal():90] W&B internal server running at pid: 16776, started at: 2022-07-18 21:50:47.358074
+2022-07-18 21:50:47,360 INFO    WriterThread:16776 [datastore.py:open_for_write():75] open: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\run-201c0t39.wandb
+2022-07-18 21:50:47,365 DEBUG   SenderThread:16776 [sender.py:send():236] send: header
+2022-07-18 21:50:47,365 DEBUG   SenderThread:16776 [sender.py:send():236] send: run
+2022-07-18 21:50:47,587 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: check_version
+2022-07-18 21:50:47,588 INFO    SenderThread:16776 [dir_watcher.py:__init__():216] watching files in: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files
+2022-07-18 21:50:47,595 INFO    SenderThread:16776 [sender.py:_start_run_threads():815] run started: 201c0t39 with start time 1658173844
+2022-07-18 21:50:47,595 DEBUG   SenderThread:16776 [sender.py:send():236] send: summary
+2022-07-18 21:50:47,596 INFO    SenderThread:16776 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-18 21:50:47,596 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: check_version
+2022-07-18 21:50:47,681 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: run_start
+2022-07-18 21:50:47,694 DEBUG   HandlerThread:16776 [meta.py:__init__():35] meta init
+2022-07-18 21:50:47,694 DEBUG   HandlerThread:16776 [meta.py:__init__():49] meta init done
+2022-07-18 21:50:47,694 DEBUG   HandlerThread:16776 [meta.py:probe():209] probe
+2022-07-18 21:50:47,706 DEBUG   HandlerThread:16776 [meta.py:_setup_git():199] setup git
+2022-07-18 21:50:47,792 DEBUG   HandlerThread:16776 [meta.py:_setup_git():206] setup git done
+2022-07-18 21:50:47,792 DEBUG   HandlerThread:16776 [meta.py:_save_pip():53] save pip
+2022-07-18 21:50:47,793 DEBUG   HandlerThread:16776 [meta.py:_save_pip():67] save pip done
+2022-07-18 21:50:47,793 DEBUG   HandlerThread:16776 [meta.py:_save_conda():74] save conda
+2022-07-18 21:50:48,601 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\conda-environment.yaml
+2022-07-18 21:50:48,602 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\requirements.txt
+2022-07-18 21:50:48,602 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\wandb-summary.json
+2022-07-18 21:50:50,825 DEBUG   HandlerThread:16776 [meta.py:_save_conda():84] save conda done
+2022-07-18 21:50:50,825 DEBUG   HandlerThread:16776 [meta.py:probe():247] probe done
+2022-07-18 21:50:50,915 DEBUG   SenderThread:16776 [sender.py:send():236] send: files
+2022-07-18 21:50:50,915 INFO    SenderThread:16776 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-07-18 21:50:50,915 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-18 21:50:50,917 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: stop_status
+2022-07-18 21:50:51,093 DEBUG   SenderThread:16776 [sender.py:send():236] send: telemetry
+2022-07-18 21:50:51,476 INFO    Thread-17 :16776 [upload_job.py:push():138] Uploaded file C:\Users\aksha\AppData\Local\Temp\tmpq4xuidzpwandb\30sltrqc-wandb-metadata.json
+2022-07-18 21:50:51,627 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\wandb-metadata.json
+2022-07-18 21:50:51,628 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:50:53,268 DEBUG   SenderThread:16776 [sender.py:send():236] send: telemetry
+2022-07-18 21:50:53,271 DEBUG   SenderThread:16776 [sender.py:send():236] send: config
+2022-07-18 21:50:53,275 DEBUG   SenderThread:16776 [sender.py:send():236] send: config
+2022-07-18 21:50:53,278 DEBUG   SenderThread:16776 [sender.py:send():236] send: config
+2022-07-18 21:50:53,281 DEBUG   SenderThread:16776 [sender.py:send():236] send: config
+2022-07-18 21:50:54,156 DEBUG   SenderThread:16776 [sender.py:send():236] send: config
+2022-07-18 21:50:54,375 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: log_artifact
+2022-07-18 21:50:54,375 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: log_artifact
+2022-07-18 21:50:54,661 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\media\table\my_custom_id_1_Before_table_0_f1151ff389b0baf97374.table.json
+2022-07-18 21:50:54,661 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\media\table
+2022-07-18 21:50:54,662 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\media
+2022-07-18 21:50:54,759 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-18 21:50:56,305 INFO    Thread-19 :16776 [upload_job.py:push():96] Uploaded file C:\Users\aksha\.cache\wandb\artifacts\obj\md5\da\8afd0bcf58001483fd9100087a7bc2
+2022-07-18 21:50:57,294 INFO    SenderThread:16776 [sender.py:send_request_log_artifact():1009] logged artifact run-201c0t39-my_custom_id_1_Before_table - {'id': 'QXJ0aWZhY3Q6MTYwMDI3ODYy', 'digest': 'b3d0814af80e102612c6224b327b00c1', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjI0NDA3NzI1', 'latestArtifact': None}, 'version': 'latest'}
+2022-07-18 21:50:57,294 DEBUG   SenderThread:16776 [sender.py:send():236] send: files
+2022-07-18 21:50:57,294 INFO    SenderThread:16776 [sender.py:_save_file():952] saving file media\table\my_custom_id_1_Before_table_0_f1151ff389b0baf97374.table.json with policy now
+2022-07-18 21:50:57,296 DEBUG   SenderThread:16776 [sender.py:send():236] send: history
+2022-07-18 21:50:57,296 DEBUG   SenderThread:16776 [sender.py:send():236] send: summary
+2022-07-18 21:50:57,300 INFO    SenderThread:16776 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-18 21:50:57,698 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\wandb-summary.json
+2022-07-18 21:50:57,699 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:50:57,907 INFO    Thread-20 :16776 [upload_job.py:push():138] Uploaded file C:\Users\aksha\AppData\Local\Temp\tmpq4xuidzpwandb\3gfh5ygw-media/table/my_custom_id_1_Before_table_0_f1151ff389b0baf97374.table.json
+2022-07-18 21:51:03,760 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:51:06,102 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-18 21:51:06,102 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: stop_status
+2022-07-18 21:51:07,788 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:51:13,850 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:51:18,598 DEBUG   SenderThread:16776 [sender.py:send():236] send: stats
+2022-07-18 21:51:18,893 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\config.yaml
+2022-07-18 21:51:19,902 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:51:21,331 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-18 21:51:21,331 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: stop_status
+2022-07-18 21:51:25,960 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:51:32,016 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:51:36,038 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:51:36,521 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-18 21:51:36,522 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: stop_status
+2022-07-18 21:51:42,086 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:51:47,151 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:51:51,710 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: stop_status
+2022-07-18 21:51:51,710 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: stop_status
+2022-07-18 21:51:51,908 DEBUG   SenderThread:16776 [sender.py:send():236] send: stats
+2022-07-18 21:51:52,733 DEBUG   SenderThread:16776 [sender.py:send():236] send: config
+2022-07-18 21:51:52,958 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: log_artifact
+2022-07-18 21:51:52,959 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: log_artifact
+2022-07-18 21:51:53,012 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-18 21:51:53,166 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-18 21:51:53,168 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-18 21:51:53,169 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: partial_history
+2022-07-18 21:51:53,231 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_created():269] file/dir created: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\media\table\my_custom_id_1_After_table_1_14f81a808413e4f458f7.table.json
+2022-07-18 21:51:53,231 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\media\table
+2022-07-18 21:51:53,932 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:54,188 INFO    Thread-22 :16776 [upload_job.py:push():96] Uploaded file C:\Users\aksha\.cache\wandb\artifacts\obj\md5\4e\9761d54ccb99c5181b1f53983db6dd
+2022-07-18 21:51:54,235 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:51:55,130 INFO    SenderThread:16776 [sender.py:send_request_log_artifact():1009] logged artifact run-201c0t39-my_custom_id_1_After_table - {'id': 'QXJ0aWZhY3Q6MTYwMDI4MTI0', 'digest': '4530b0ac1585a3cccc5c4f3c41035f8b', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjI0NDA3NzY0', 'latestArtifact': None}, 'version': 'latest'}
+2022-07-18 21:51:55,130 DEBUG   SenderThread:16776 [sender.py:send():236] send: files
+2022-07-18 21:51:55,130 INFO    SenderThread:16776 [sender.py:_save_file():952] saving file media\table\my_custom_id_1_After_table_1_14f81a808413e4f458f7.table.json with policy now
+2022-07-18 21:51:55,131 DEBUG   SenderThread:16776 [sender.py:send():236] send: history
+2022-07-18 21:51:55,131 DEBUG   SenderThread:16776 [sender.py:send():236] send: summary
+2022-07-18 21:51:55,132 INFO    SenderThread:16776 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-18 21:51:55,132 DEBUG   SenderThread:16776 [sender.py:send():236] send: history
+2022-07-18 21:51:55,133 DEBUG   SenderThread:16776 [sender.py:send():236] send: summary
+2022-07-18 21:51:55,133 INFO    SenderThread:16776 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-18 21:51:55,134 DEBUG   SenderThread:16776 [sender.py:send():236] send: history
+2022-07-18 21:51:55,134 DEBUG   SenderThread:16776 [sender.py:send():236] send: summary
+2022-07-18 21:51:55,135 INFO    SenderThread:16776 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-18 21:51:55,136 DEBUG   SenderThread:16776 [sender.py:send():236] send: history
+2022-07-18 21:51:55,136 DEBUG   SenderThread:16776 [sender.py:send():236] send: summary
+2022-07-18 21:51:55,138 INFO    SenderThread:16776 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-18 21:51:55,142 DEBUG   SenderThread:16776 [sender.py:send():236] send: telemetry
+2022-07-18 21:51:55,142 DEBUG   SenderThread:16776 [sender.py:send():236] send: exit
+2022-07-18 21:51:55,142 INFO    SenderThread:16776 [sender.py:send_exit():372] handling exit code: 0
+2022-07-18 21:51:55,142 INFO    SenderThread:16776 [sender.py:send_exit():374] handling runtime: 66
+2022-07-18 21:51:55,144 INFO    SenderThread:16776 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-18 21:51:55,144 INFO    SenderThread:16776 [sender.py:send_exit():380] send defer
+2022-07-18 21:51:55,145 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:55,146 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: defer
+2022-07-18 21:51:55,146 INFO    HandlerThread:16776 [handler.py:handle_request_defer():163] handle defer: 0
+2022-07-18 21:51:55,146 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: defer
+2022-07-18 21:51:55,147 INFO    SenderThread:16776 [sender.py:send_request_defer():389] handle sender defer: 0
+2022-07-18 21:51:55,147 INFO    SenderThread:16776 [sender.py:transition_state():393] send defer: 1
+2022-07-18 21:51:55,147 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: defer
+2022-07-18 21:51:55,148 INFO    HandlerThread:16776 [handler.py:handle_request_defer():163] handle defer: 1
+2022-07-18 21:51:55,249 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: defer
+2022-07-18 21:51:55,249 INFO    SenderThread:16776 [sender.py:send_request_defer():389] handle sender defer: 1
+2022-07-18 21:51:55,250 INFO    SenderThread:16776 [sender.py:transition_state():393] send defer: 2
+2022-07-18 21:51:55,250 DEBUG   SenderThread:16776 [sender.py:send():236] send: stats
+2022-07-18 21:51:55,251 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: defer
+2022-07-18 21:51:55,251 INFO    HandlerThread:16776 [handler.py:handle_request_defer():163] handle defer: 2
+2022-07-18 21:51:55,252 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: defer
+2022-07-18 21:51:55,252 INFO    SenderThread:16776 [sender.py:send_request_defer():389] handle sender defer: 2
+2022-07-18 21:51:55,252 INFO    SenderThread:16776 [sender.py:transition_state():393] send defer: 3
+2022-07-18 21:51:55,253 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: defer
+2022-07-18 21:51:55,253 INFO    HandlerThread:16776 [handler.py:handle_request_defer():163] handle defer: 3
+2022-07-18 21:51:55,253 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: defer
+2022-07-18 21:51:55,253 INFO    SenderThread:16776 [sender.py:send_request_defer():389] handle sender defer: 3
+2022-07-18 21:51:55,253 INFO    SenderThread:16776 [sender.py:transition_state():393] send defer: 4
+2022-07-18 21:51:55,254 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:55,254 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:55,254 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: defer
+2022-07-18 21:51:55,255 INFO    HandlerThread:16776 [handler.py:handle_request_defer():163] handle defer: 4
+2022-07-18 21:51:55,256 DEBUG   SenderThread:16776 [sender.py:send():236] send: summary
+2022-07-18 21:51:55,257 INFO    Thread-11 :16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\wandb-summary.json
+2022-07-18 21:51:55,257 INFO    SenderThread:16776 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-07-18 21:51:55,258 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: defer
+2022-07-18 21:51:55,258 INFO    SenderThread:16776 [sender.py:send_request_defer():389] handle sender defer: 4
+2022-07-18 21:51:55,258 INFO    SenderThread:16776 [sender.py:transition_state():393] send defer: 5
+2022-07-18 21:51:55,259 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: defer
+2022-07-18 21:51:55,259 INFO    HandlerThread:16776 [handler.py:handle_request_defer():163] handle defer: 5
+2022-07-18 21:51:55,259 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: defer
+2022-07-18 21:51:55,259 INFO    SenderThread:16776 [sender.py:send_request_defer():389] handle sender defer: 5
+2022-07-18 21:51:55,362 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:55,531 INFO    SenderThread:16776 [sender.py:transition_state():393] send defer: 6
+2022-07-18 21:51:55,532 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:55,533 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: defer
+2022-07-18 21:51:55,533 INFO    HandlerThread:16776 [handler.py:handle_request_defer():163] handle defer: 6
+2022-07-18 21:51:55,533 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: defer
+2022-07-18 21:51:55,533 INFO    SenderThread:16776 [sender.py:send_request_defer():389] handle sender defer: 6
+2022-07-18 21:51:55,533 INFO    SenderThread:16776 [dir_watcher.py:finish():353] shutting down directory watcher
+2022-07-18 21:51:55,643 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:55,672 INFO    Thread-23 :16776 [upload_job.py:push():138] Uploaded file C:\Users\aksha\AppData\Local\Temp\tmpq4xuidzpwandb\3b6tabb0-media/table/my_custom_id_1_After_table_1_14f81a808413e4f458f7.table.json
+2022-07-18 21:51:56,267 INFO    SenderThread:16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\wandb-summary.json
+2022-07-18 21:51:56,267 INFO    SenderThread:16776 [dir_watcher.py:_on_file_modified():286] file/dir modified: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\config.yaml
+2022-07-18 21:51:56,269 INFO    SenderThread:16776 [dir_watcher.py:finish():383] scan: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files
+2022-07-18 21:51:56,270 INFO    SenderThread:16776 [dir_watcher.py:finish():397] scan save: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\conda-environment.yaml conda-environment.yaml
+2022-07-18 21:51:56,270 INFO    SenderThread:16776 [dir_watcher.py:finish():397] scan save: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\config.yaml config.yaml
+2022-07-18 21:51:56,270 INFO    SenderThread:16776 [dir_watcher.py:finish():397] scan save: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log output.log
+2022-07-18 21:51:56,271 INFO    SenderThread:16776 [dir_watcher.py:finish():397] scan save: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\requirements.txt requirements.txt
+2022-07-18 21:51:56,273 INFO    SenderThread:16776 [dir_watcher.py:finish():397] scan save: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\wandb-metadata.json wandb-metadata.json
+2022-07-18 21:51:56,274 INFO    SenderThread:16776 [dir_watcher.py:finish():397] scan save: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\wandb-summary.json wandb-summary.json
+2022-07-18 21:51:56,283 INFO    SenderThread:16776 [dir_watcher.py:finish():397] scan save: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\media\table\my_custom_id_1_After_table_1_14f81a808413e4f458f7.table.json media\table\my_custom_id_1_After_table_1_14f81a808413e4f458f7.table.json
+2022-07-18 21:51:56,283 INFO    SenderThread:16776 [dir_watcher.py:finish():397] scan save: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\media\table\my_custom_id_1_Before_table_0_f1151ff389b0baf97374.table.json media\table\my_custom_id_1_Before_table_0_f1151ff389b0baf97374.table.json
+2022-07-18 21:51:56,283 INFO    SenderThread:16776 [sender.py:transition_state():393] send defer: 7
+2022-07-18 21:51:56,283 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:56,284 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: defer
+2022-07-18 21:51:56,284 INFO    HandlerThread:16776 [handler.py:handle_request_defer():163] handle defer: 7
+2022-07-18 21:51:56,285 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: defer
+2022-07-18 21:51:56,285 INFO    SenderThread:16776 [sender.py:send_request_defer():389] handle sender defer: 7
+2022-07-18 21:51:56,285 INFO    SenderThread:16776 [file_pusher.py:finish():171] shutting down file pusher
+2022-07-18 21:51:56,389 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:56,389 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:56,496 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:56,497 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:56,606 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:56,606 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:56,713 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:56,713 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:56,821 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:56,822 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:56,836 INFO    Thread-25 :16776 [upload_job.py:push():138] Uploaded file C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\output.log
+2022-07-18 21:51:56,837 INFO    Thread-24 :16776 [upload_job.py:push():138] Uploaded file C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\config.yaml
+2022-07-18 21:51:56,857 INFO    Thread-26 :16776 [upload_job.py:push():138] Uploaded file C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\requirements.txt
+2022-07-18 21:51:56,871 INFO    Thread-27 :16776 [upload_job.py:push():138] Uploaded file C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\files\wandb-summary.json
+2022-07-18 21:51:56,930 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:56,930 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:57,039 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:57,039 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:57,084 INFO    Thread-10 :16776 [sender.py:transition_state():393] send defer: 8
+2022-07-18 21:51:57,085 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: defer
+2022-07-18 21:51:57,086 INFO    HandlerThread:16776 [handler.py:handle_request_defer():163] handle defer: 8
+2022-07-18 21:51:57,086 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: defer
+2022-07-18 21:51:57,086 INFO    SenderThread:16776 [sender.py:send_request_defer():389] handle sender defer: 8
+2022-07-18 21:51:57,148 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:57,770 INFO    SenderThread:16776 [sender.py:transition_state():393] send defer: 9
+2022-07-18 21:51:57,771 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:57,772 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: defer
+2022-07-18 21:51:57,772 INFO    HandlerThread:16776 [handler.py:handle_request_defer():163] handle defer: 9
+2022-07-18 21:51:57,773 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: defer
+2022-07-18 21:51:57,773 INFO    SenderThread:16776 [sender.py:send_request_defer():389] handle sender defer: 9
+2022-07-18 21:51:57,773 INFO    SenderThread:16776 [sender.py:transition_state():393] send defer: 10
+2022-07-18 21:51:57,775 DEBUG   SenderThread:16776 [sender.py:send():236] send: final
+2022-07-18 21:51:57,775 DEBUG   SenderThread:16776 [sender.py:send():236] send: footer
+2022-07-18 21:51:57,776 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: defer
+2022-07-18 21:51:57,776 INFO    HandlerThread:16776 [handler.py:handle_request_defer():163] handle defer: 10
+2022-07-18 21:51:57,777 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: defer
+2022-07-18 21:51:57,777 INFO    SenderThread:16776 [sender.py:send_request_defer():389] handle sender defer: 10
+2022-07-18 21:51:57,879 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: poll_exit
+2022-07-18 21:51:57,879 DEBUG   SenderThread:16776 [sender.py:send_request():250] send_request: poll_exit
+2022-07-18 21:51:57,880 INFO    SenderThread:16776 [file_pusher.py:join():176] waiting for file pusher
+2022-07-18 21:51:58,188 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: sampled_history
+2022-07-18 21:51:58,191 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: get_summary
+2022-07-18 21:51:58,194 DEBUG   HandlerThread:16776 [handler.py:handle_request():140] handle_request: shutdown
+2022-07-18 21:51:58,194 INFO    HandlerThread:16776 [handler.py:finish():806] shutting down handler
+2022-07-18 21:51:58,783 INFO    WriterThread:16776 [datastore.py:close():279] close: C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\wandb\run-20220718_215044-201c0t39\run-201c0t39.wandb
+2022-07-18 21:51:59,077 INFO    SenderThread:16776 [sender.py:finish():1114] shutting down sender
+2022-07-18 21:51:59,077 INFO    SenderThread:16776 [file_pusher.py:finish():171] shutting down file pusher
+2022-07-18 21:51:59,077 INFO    SenderThread:16776 [file_pusher.py:join():176] waiting for file pusher
+2022-07-18 21:51:59,077 INFO    MainThread:16776 [internal.py:handle_exit():80] Internal process exited
