@@ -22,10 +22,10 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 DATA_PATH = '../dataset/704dim_embeds.pt'
 name = '704_dimension_embedding'
 list_of_embeddings =torch.load(DATA_PATH, map_location='cpu')
-
+print("Original Data has datapoints: ",len(list_of_embeddings))
 settings = { 
     "datapoints": 100,
-    "num_steps": 400,
+    "num_steps": 1000,
     "batch_size": 64,
     "input_dimension": 704
     }
