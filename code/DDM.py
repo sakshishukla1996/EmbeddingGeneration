@@ -1,7 +1,9 @@
+from distutils.command.config import config
 import wandb
 
 wandb.init(project="DDM-Project")
 WANDB_API_KEY = 'ffe5b918b921d391434d044c9bc030bdef3d48de'
+
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,7 +19,8 @@ from utils import *
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # print("Acquired GPU successfully")
 # device = torch.device("cuda:2,3,4" if torch.cuda.is_available() else "cpu")
-DATA_PATH = '../dataset/embedding_vectors_as_list.pt'
+# DATA_PATH = '../dataset/embedding_vectors_as_list.pt'
+DATA_PATH = '../dataset/704dim_embeds.pt'
 list_of_embeddings =torch.load(DATA_PATH, map_location='cpu')
 
 #Taking first 100 items from speaker embedding list and running the experiment
@@ -26,7 +29,7 @@ b = torch.stack(ten_emb)
 c = b.detach().numpy()
 c = dataNormalize(c)
 
-TSNE_plot(c, color='red', name='BeforeDDM.png')    
+TSNE_plot(c, color='red', name='BeforeDDM704.png')    
 
 print("The shape of input is: ", c.shape)
 
@@ -73,35 +76,19 @@ optimizer = optim.Adam(model.parameters(), lr=1e-4)
 ema = EMA(0.9)
 ema.register(model)
 
-# Batch size
-wandb.config = {
-  "epochs": num_steps,
-  "batch_size": batch_size
-}
-
 for t in range(1000):
-    # X is a torch Variable
     permutation = torch.randperm(dataset.size()[0])
     for i in range(0, dataset.size()[0], batch_size):
-        # Retrieve current batch
         indices = permutation[i:i+batch_size]
         batch_x = dataset[indices]
-        # Compute the loss.
         loss = noise_estimation_loss(model, batch_x,alphas_bar_sqrt,one_minus_alphas_bar_sqrt,num_steps)
         wandb.log({"loss": loss})
-        # Optional
         wandb.watch(model)
-        # Before the backward pass, zero all of the network gradients
         optimizer.zero_grad()
-        # Backward pass: compute gradient of the loss with respect to parameters
         loss.backward()
-        # Perform gradient clipping
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.)
-        # Calling the step function to update the parameters
         optimizer.step()
-        # Update the exponential moving average
         ema.update(model)
-    # Print loss
     if (t % 100 == 0):
         print(loss)
         x_seq = p_sample_loop(model, dataset.shape,num_steps,alphas,betas,one_minus_alphas_bar_sqrt)
@@ -114,9 +101,11 @@ for t in range(1000):
 
 
 print(len(x_seq))
+torch.save(x_seq, '../emebddings_after_noise_sampling/704_1st_test.pt')
 d = cur_x.detach().numpy()
 d = dataNormalize(d)
-TSNE_plot(d, color='blue', name='AfterDDM.png')
+
+TSNE_plot(d, color='blue', name='AfterDDM704.png')
 
 #Now Plotting both on same graph with different colors
 #Plotting 2D array
@@ -130,7 +119,5 @@ ax.scatter(c[:,0], c[:,1], alpha=.5, color='red')
 ax.scatter(d[:,0], d[:,1], alpha=.5, color='blue')
 plt.title('Scatter plot using t-SNE')
 # plt.show()
-wandb.log({"chart": plt})
-
-
-plt.savefig('AfterDDMBoth.png')
+# wandb.log({"chart": plt})
+plt.savefig('AfterDDMBoth704.png')

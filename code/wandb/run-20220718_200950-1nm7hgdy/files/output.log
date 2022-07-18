@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\code\DDM.py", line 7, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
