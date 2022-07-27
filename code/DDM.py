@@ -1,7 +1,7 @@
 from distutils.command.config import config
 from unicodedata import name
 import wandb
-
+from sklearn.metrics.pairwise import cosine_similarity
 wandb.init(project="DDM-Project")
 WANDB_API_KEY = 'ffe5b918b921d391434d044c9bc030bdef3d48de'
 
@@ -19,15 +19,17 @@ from utils import *
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # DATA_PATH = '../dataset/embedding_vectors_as_list.pt'
-DATA_PATH = '../dataset/704dim_embeds.pt'
-name = '704_dimension_embedding'
+# DATA_PATH = '../dataset/704dim_embeds.pt'
+DATA_PATH = '../dataset/expected_128.pt'
+
+name = '128_dimension_embedding_datapoints'
 list_of_embeddings =torch.load(DATA_PATH, map_location='cpu')
 print("Original Data has datapoints: ",len(list_of_embeddings))
 settings = { 
     "datapoints": 100,
-    "num_steps": 1000,
+    "num_steps": 500,
     "batch_size": 64,
-    "input_dimension": 704
+    "input_dimension": 128
     }
 
 wandb.config.datapoints = settings["datapoints"]
@@ -158,6 +160,32 @@ wandb.log({"Original_Mean": c_mean})
 wandb.log({"Generated_Mean": d_mean})
 wandb.log({"Difference_Mean": diff_mean})
 
+#Variance
+c_var = np.var(c, axis=1)
+d_var = np.var(d, axis=1)
+print("Original VAR is: ", c_var)
+print("Generated VAR is: ", d_var)
+
+diff_var = c_var - d_var
+var_abs_original = np.sum(c_var)
+var_abs_generated = np.sum(d_var)
+
+print("Difference between Two VAR is: ", diff_var)
+wandb.log({"Original_VAR": c_var})
+wandb.log({"Generated_VAR": d_var})
+wandb.log({"Difference_VAR": diff_var})
+
 print("Original AM is: ", mean_abs_original)
 print("Generated AM is: ", mean_abs_generated)
+print("Absolute diff in Mean is: ", (mean_abs_original-mean_abs_generated))
+
+print("Original VAR is: ", var_abs_original)
+print("Generated VAR is: ", var_abs_generated)
+print("Absolute diff in VAR is: ", (var_abs_original-var_abs_generated))
+
+cosine = cosine_similarity(c, d)
+print("Cosine Similarity is: ", cosine)
+print("Cosine Mean is: ", np.mean(cosine))
+
+
 

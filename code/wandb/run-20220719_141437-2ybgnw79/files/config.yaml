@@ -1,0 +1,99 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.12.21
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.12
+    start_time: 1658232877
+    t:
+      1:
+      - 5
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 53
+      - 55
+      3:
+      - 19
+      4: 3.9.12
+      5: 0.12.21
+      8:
+      - 3
+      - 5
+    visualize:
+      my_custom_id_1_After:
+        panel_config:
+          fieldSettings:
+            x: Dimension_1
+            y: Dimension_2
+          panelDefId: wandb/scatter/v0
+          stringSettings:
+            title: null
+          transform:
+            name: tableWithLeafColNames
+          userQuery:
+            queryFields:
+            - args:
+              - name: runSets
+                value: ${runSets}
+              fields:
+              - fields: []
+                name: id
+              - fields: []
+                name: name
+              - fields: []
+                name: _defaultColorIndex
+              - args:
+                - name: tableKey
+                  value: my_custom_id_1_After_table
+                fields: []
+                name: summaryTable
+              name: runSets
+        panel_type: Vega2
+      my_custom_id_1_Before:
+        panel_config:
+          fieldSettings:
+            x: Dimension_1
+            y: Dimension_2
+          panelDefId: wandb/scatter/v0
+          stringSettings:
+            title: null
+          transform:
+            name: tableWithLeafColNames
+          userQuery:
+            queryFields:
+            - args:
+              - name: runSets
+                value: ${runSets}
+              fields:
+              - fields: []
+                name: id
+              - fields: []
+                name: name
+              - fields: []
+                name: _defaultColorIndex
+              - args:
+                - name: tableKey
+                  value: my_custom_id_1_Before_table
+                fields: []
+                name: summaryTable
+              name: runSets
+        panel_type: Vega2
+batch_size:
+  desc: null
+  value: 64
+datapoints:
+  desc: null
+  value: 1000
+dimensions:
+  desc: null
+  value: 704
+num_steps:
+  desc: null
+  value: 500
