@@ -23,7 +23,7 @@ python3 main.py
 Linear and UNet Model are written in model.py file, which can be modified as per the requirement
 
 UNet model Architecture
-
+![UNet Architecture](https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/figures/Unet.drawio.png)
 ## Output Audio Samples
 These audio samples are generated after passing the generated embeddings to a TTS Engine. 
 
