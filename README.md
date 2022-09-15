@@ -28,5 +28,16 @@ UNet model Architecture
 These audio samples are generated after passing the generated embeddings to a TTS Engine. 
 
 
-Female Voice: https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/output/download1Female.wav
-Male Voice: https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/output/download3Male.wav
+Female Voice:  
+
+https://media.github.tik.uni-stuttgart.de/user/5258/files/dd0d0b7e-e4fc-4327-99ca-29f1bb1c3a85
+
+
+Male Voice: 
+
+https://media.github.tik.uni-stuttgart.de/user/5258/files/06631b39-0a5e-4342-89fd-0877007072a9
+
+
+
+
+
