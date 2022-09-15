@@ -41,7 +41,7 @@ b = torch.stack(embeddings)
 c = b.detach().numpy()
 c = dataNormalize(c)
 
-before_name = "../Figures/"+"before" + str(name)
+before_name = "../figures/"+"before" + str(name)
 c_PCA = TSNE(n_components=2, learning_rate='auto',init='random',random_state=0, perplexity=20).fit_transform(c)  
 fig, ax = plt.subplots(figsize=(10,8))
 ax.scatter(c_PCA[:,0], c_PCA[:,1], alpha=.5, color="r")
@@ -120,7 +120,7 @@ torch.save(x_seq, embedding_name)
 d = cur_x.detach().numpy()
 d = dataNormalize(d)
 
-after_name = "../Figures/"+"after" + str(name)
+after_name = "../figures/"+"after" + str(name)
 
 d_PCA = TSNE(n_components=2, learning_rate='auto',init='random',random_state=0, perplexity=20).fit_transform(d)  
 fig, ax = plt.subplots(figsize=(10,8))
@@ -139,7 +139,7 @@ ax.scatter(c_PCA[:,0], c_PCA[:,1], alpha=.5, color='red')
 ax.scatter(d_PCA[:,0], d_PCA[:,1], alpha=.5, color='blue')
 plt_title = 'Scatter plot using t-SNE for ' + str(name)
 plt.title(plt_title)
-both_name = '../Figures/'+'After DDM Both ' + str(name) + '.png'
+both_name = '../figures/'+'After DDM Both ' + str(name) + '.png'
 plt.savefig(both_name)
 
 #Computing Mean Across Dimensions
