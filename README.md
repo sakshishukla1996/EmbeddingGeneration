@@ -2,9 +2,9 @@
 
 First please install 'requirements.txt'
 
-'''bash
+```bash
 pip3 install -r requirements.txt
-'''
+```
 
 ## Dataset
 
@@ -14,7 +14,9 @@ There are 3 types of embeddings generated from LibreSpeech Corpus:
 3. 704 Dimensional, which has 5k samples
 
 ## Training
+```bash
 python3 main.py
+```
 
 ## Output Audio Samples
 
