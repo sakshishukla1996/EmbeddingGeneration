@@ -1,4 +1,10 @@
 ## Speaker Embedding Generation using Denoising Diffusion Probalistic Models
+
+### Denoising Diffusion Probalistic Models
+![Forward Noise](https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/figures/Forward_noise.png)
+
+![Backward Noise](https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/figures/backward_noise.png)
+
 Experiments run on 3.3Ghz AMD EPYC 7002 series. Requires Python 3.8, and these dependencies for CPU instances, please install 'requirements.txt'
 
 ```bash
