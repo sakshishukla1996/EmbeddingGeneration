@@ -29,10 +29,12 @@ These audio samples are generated after passing the generated embeddings to a TT
 
 
 Female Voice:  
-https://media.github.tik.uni-stuttgart.de/user/5258/files/dd0d0b7e-e4fc-4327-99ca-29f1bb1c3a85
+
+https://media.github.tik.uni-stuttgart.de/user/5258/files/afb624ab-1620-49a0-8119-2d4fa8310c27
 
 Male Voice: 
-https://media.github.tik.uni-stuttgart.de/user/5258/files/06631b39-0a5e-4342-89fd-0877007072a9
+
+https://media.github.tik.uni-stuttgart.de/user/5258/files/98ad29e5-c7ce-4e9d-a2c8-7badc3c942d5
 
 ## References
 
