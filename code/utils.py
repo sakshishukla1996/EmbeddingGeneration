@@ -1,5 +1,4 @@
 # Loss Function for Diffusion Model
-# Original Source: https://github.com/acids-ircam/diffusion_models
 
 import torch
 import numpy as np

@@ -35,7 +35,6 @@ class ConditionalModel(nn.Module):
         return self.lin5(x)
 
 #UNET Pytorch
-
 class conbr_block(nn.Module):
     def __init__(self, in_layer, out_layer, kernel_size, stride, dilation):
         super(conbr_block, self).__init__()
