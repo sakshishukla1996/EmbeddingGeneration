@@ -18,5 +18,11 @@ There are 3 types of embeddings generated from LibreSpeech Corpus:
 python3 main.py
 ```
 
+## Model
+
+Linear and UNet Model are written in model.py file, which can be modified as per the requirement
+
+UNet model Architecture
+
 ## Output Audio Samples
 
