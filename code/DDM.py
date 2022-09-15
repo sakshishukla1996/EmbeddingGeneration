@@ -1,21 +1,20 @@
 from distutils.command.config import config
 from unicodedata import name
-import wandb
-from sklearn.metrics.pairwise import cosine_similarity
-wandb.init(project="DDM-Project")
-WANDB_API_KEY = 'ffe5b918b921d391434d044c9bc030bdef3d48de'
-
-import torch
-import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 from TSNE_Plot import TSNE_plot
 from dataNormalize import dataNormalize
 from model import ConditionalModel
 from ema import EMA
+from sklearn.metrics.pairwise import cosine_similarity
 import torch.optim as optim
-
 from utils import * 
+import wandb
+import torch
+import numpy as np
+
+wandb.init(project="DDM-Project")
+WANDB_API_KEY = 'ffe5b918b921d391434d044c9bc030bdef3d48de'
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # DATA_PATH = '../dataset/embedding_vectors_as_list.pt'
@@ -25,9 +24,10 @@ DATA_PATH = '../dataset/expected_128.pt'
 name = '128_dimension_embedding_datapoints'
 list_of_embeddings =torch.load(DATA_PATH, map_location='cpu')
 print("Original Data has datapoints: ",len(list_of_embeddings))
+
 settings = { 
-    "datapoints": 100,
-    "num_steps": 500,
+    "datapoints": 5000,
+    "num_steps": 100,
     "batch_size": 64,
     "input_dimension": 128
     }
@@ -49,7 +49,6 @@ ax.scatter(c_PCA[:,0], c_PCA[:,1], alpha=.5, color="r")
 before_title = 'Scatter plot using t-SNE' + before_name
 plt.title(before_title)
 plt.savefig(before_name)
-# wandb.log({"chart": plt})
 
 data = [[x, y] for (x, y) in zip(c_PCA[:,0], c_PCA[:,1])]
 table = wandb.Table(data=data, columns = ["Dimension_1", "Dimension_2"])
@@ -160,7 +159,7 @@ wandb.log({"Original_Mean": c_mean})
 wandb.log({"Generated_Mean": d_mean})
 wandb.log({"Difference_Mean": diff_mean})
 
-#Variance
+#Computing Variance Across Dimensions
 c_var = np.var(c, axis=1)
 d_var = np.var(d, axis=1)
 print("Original VAR is: ", c_var)

@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\Code\DDM.py", line 14, in <module>
-    from model import ConditionalModel
-  File "C:\Users\aksha\Documents\GitHub\SpeakerEmbeddingGenerationDenoisingDiffusion\Code\model.py", line 30
-    = F.softplus(self.lin1(x, y))
-IndentationError: unexpected indent
