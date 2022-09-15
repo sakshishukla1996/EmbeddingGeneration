@@ -41,6 +41,14 @@ Male Voice:
 
 https://media.github.tik.uni-stuttgart.de/user/5258/files/98ad29e5-c7ce-4e9d-a2c8-7badc3c942d5
 
+## Output
+Red points represents original data points in the distribution and blue ones are generated datapoints. 
+
+![64 Dimension](https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/figures/After%20DDM%20Both%2064UNET_dimension_embedding_datapoints.png)
+
+![128 Dimension](https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/figures/After%20DDM%20Both%20128_dimension_embedding_datapoints.png)
+
+![704 Dimension](https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/figures/After%20DDM%20Both%20704_dimension_embedding_datapoints.png)
 ## References
 
 
