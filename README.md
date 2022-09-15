@@ -25,4 +25,7 @@ Linear and UNet Model are written in model.py file, which can be modified as per
 UNet model Architecture
 
 ## Output Audio Samples
+These audio samples are generated after passing the generated embeddings to a TTS Engine. 
 
+Male Voice:
+Female Voice: 
