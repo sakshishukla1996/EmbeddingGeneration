@@ -1,6 +1,5 @@
 ## Speaker Embedding Generation using Denoising Diffusion Probalistic Models
-Experiments run on 3.3Ghz AMD EPYC 7002 series. Requires Python 3.8, and these dependencies for CPU instances
-First please install 'requirements.txt'
+Experiments run on 3.3Ghz AMD EPYC 7002 series. Requires Python 3.8, and these dependencies for CPU instances, please install 'requirements.txt'
 
 ```bash
 pip3 install -r requirements.txt
