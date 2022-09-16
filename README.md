@@ -43,8 +43,9 @@ https://media.github.tik.uni-stuttgart.de/user/5258/files/98ad29e5-c7ce-4e9d-a2c
 
 ## Output
 Red points represents original data points in the distribution and blue ones are generated datapoints. 
+T-Sne plot of Generated and Original datapoints. 
 
-![Output Result]()
+![Plot](https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/figures/TSNE-Based%202D%20Plot%20of%2064%20dimensional%20Embeddings.png)
 
 ## References
 
