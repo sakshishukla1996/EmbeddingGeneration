@@ -1,9 +1,9 @@
 ## Speaker Embedding Generation using Denoising Diffusion Probalistic Models
 
 ### Denoising Diffusion Probalistic Models
-![Forward Noise](https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/figures/Forward_noise.png)
+![Forward Noise](./figures/Forward_noise.png)
 
-![Backward Noise](https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/figures/backward_noise.png)
+![Backward Noise](./figures/backward_noise.png)
 
 Experiments run on 3.3Ghz AMD EPYC 7002 series. Requires Python 3.8, and these dependencies for CPU instances, please install 'requirements.txt'
 
@@ -28,7 +28,7 @@ python3 main.py
 Linear and UNet Model are written in model.py file, which can be modified as per the requirement
 
 UNet model Architecture
-![UNet Architecture](https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/figures/Unet.drawio.png)
+![UNet Architecture](./figures/Unet.drawio.png)
 ## Output Audio Samples
 These audio samples are generated after passing the generated embeddings to a TTS Engine. 
 
@@ -45,7 +45,7 @@ https://media.github.tik.uni-stuttgart.de/user/5258/files/98ad29e5-c7ce-4e9d-a2c
 Red points represents original data points in the distribution and blue ones are generated datapoints. 
 T-Sne plot of Generated and Original datapoints. 
 
-![Plot](https://github.tik.uni-stuttgart.de/FlorianLux/SpeakerEmbeddingGenerationDenoisingDiffusion/blob/master/figures/TSNE-Based%202D%20Plot%20of%2064%20dimensional%20Embeddings.png)
+![Plot](./figures/TSNE-Based%202D%20Plot%20of%2064%20dimensional%20Embeddings.png)
 
 ## References
 
