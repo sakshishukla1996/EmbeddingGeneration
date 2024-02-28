@@ -34,7 +34,6 @@ These audio samples are generated after passing the generated embeddings to a TT
 
 
 Female Voice:  
-
 https://github.com/sakshishukla1996/EmbeddingGeneration/blob/master/output/download1Female.wav
 
 Male Voice: 
